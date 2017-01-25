@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WEB高级前端工程师面试题</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>WEB高级前端工程师面试题</h1>
+        <h2>阅读目录</h2>
+        <nav>
+            <ul>
+                <li><a href="#htm">HTML/CSS部分</a></li>
+                <li><a href="#js">JavaScript部分</a></li>
+                <li><a href="#http">HTTP</a></li>
+                <li><a href="#algo">算法相关</a></li>
+                <li><a href="#safe">Web安全</a></li>
+                <li><a href="#fun">前端性能</a></li>
+                <li><a href="#arc">前端架构</a></li>
+                <li><a href="#work">职业规划</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <section >
+            <div class="problem" id="htm">HTML/CSS部分</div>
+            <div class="problem-item">
+                <div class="problem-title">1、什么是盒子模型？</div>
+                <div class="problem-content">在网页中，一个元素占有空间的大小由几个部分构成，其中包括元素的内容（content），元素的内边距（padding），元素的边框（border），元素的外边距（margin）四个部分。这四个部分占有的空间中，有的部分可以显示相应的内容，而有的部分只用来分隔相邻的区域或区域。4个部分一起构成了css中元素的盒模型。</div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">2、简述同步和异步的区别?</div>
+                <div class="problem-content">
+                    <p>同步是阻塞模式，异步是非阻塞模式。</p>
+                    同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直等待下去，直到收到返回信息才继续执行下去；
+                    <br> 异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。当有消息返回时系统会通知进程进行处理，这样可以提高执行的效率。
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">3、px和em的区别</div>
+                <div class="problem-content">
+                    px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。em得值不是固定的，并且em会继承父级元素的字体大小。
+                    <br> 浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">4、什么叫优雅降级和渐进增强？</div>
+                <div class="problem-content">
+                    <p>渐进增强 progressive enhancement：</p>
+                    针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+                    <br> 优雅降级 graceful degradation：
+                    <br> 区别： a. 优雅降级是从复杂的现状开始，并试图减少用户体验的供给
+                    <br> b. 渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要
+                    <br> c. 降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">5、浏览器的内核分别是什么?</div>
+                <div class="problem-content">
+                    IE: trident内核
+                    <br> Firefox：gecko内核
+                    <br> Safari：webkit内核
+                    <br>Opera：以前是presto内核，Opera现已改用Google
+                    <br> Chrome的Blink内核 Chrome：Blink(基于webkit，Google与Opera Software共同开发)
+                </div>
+            </div>
+            <div class="problem" id="js">JavaScript部分</div>
+            <div class="problem-item">
+                <div class="problem-title">1、在Javascript中什么是伪数组？如何将伪数组转化为标准数组?</div>
+                <div class="problem-content">
+                    伪数组（类数组）：无法直接调用数组方法或期望length属性有什么特殊的行为，但仍可以对真正数组遍历方法来遍历它们。典型的是函数的argument参数，还有像调用getElementsByTagName,document.childNodes之类的,
+                    <br> 它们都返回NodeList对象都属于伪数组。可以使用Array.prototype.slice.call(fakeArray)将数组转化为真正的Array对象。
+                    <div class="code">
+                        <code>
+                    	<pre>
+                		function log(){
+						var args = Array.prototype.slice.call(arguments);  
+						//为了使用unshift数组方法，将argument转化为真正的数组
+						args.unshift('(app)');
+						 
+						console.log.apply(console, args);
+						};
+                    	</pre>
+                    	
+                    	</code>
+                    </div>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">2、Javascript中callee和caller的作用？</div>
+                <div class="problem-content">
+                    caller是返回一个对函数的引用，该函数调用了当前函数；
+                    <br> callee是返回正在被执行的function函数，也就是所指定的function对象的正文。
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">3、请描述一下cookies，sessionStorage和localStorage的区别?</div>
+                <div class="problem-content">
+                    sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
+                    <br> web storage和cookie的区别
+                    <br> Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。 除此之外，Web Storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。但是Cookie也是不可以或缺的：Cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生。
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">4、JavaScript原型，原型链 ? 有什么特点？</div>
+                <div class="problem-content">
+                    每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时， 如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype， 于是就这样一直找下去，也就是我们平时所说的原型链的概念。
+                    <br>关系：instance.constructor.prototype = instance.__proto__
+                    <br> 特点： JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。 当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的话， 就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象。
+                    <div class="code">
+                        <code>
+                    	<pre>
+                		function Func(){} 
+                		Func.prototype.name = "Sean"; 
+                		Func.prototype.getInfo = function() { 
+                		return this.name; 
+                		} 
+                		var person = new Func();//现在可以参考var person = Object.create(oldObject); 
+                		console.log(person.getInfo());
+                		//它拥有了Func的属性和方法 //"Sean"
+                		 console.log(Func.prototype); 
+                		 // Func { name="Sean", getInfo=function()}
+                    	</pre>
+                    	
+                    	</code>
+                    </div>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">5、Javascript如何实现继承?</div>
+                <div class="problem-content">
+                    1、构造继承
+                    <br> 2、原型继承
+                    <br> 3、实例继承
+                    <br> 4、拷贝继承
+                    <br> 原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式。
+                    <div class="code">
+                        <code>
+                    	<pre>
+                		function Parent(){ 
+                		this.name = 'wang'; 
+                		} 
+                		function Child(){ 
+                		this.age = 28; 
+                		} 
+                		Child.prototype = new Parent();//继承了Parent，通过原型 var demo = new Child(); 
+                		alert(demo.age); 
+                		alert(demo.name);//得到被继承的属性 }
+                    	</pre>
+                    	
+                    	</code>
+                    </div>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">6、谈谈This对象的理解。</div>
+                <div class="problem-content">
+                    this总是指向函数的直接调用者（而非间接调用者）；
+                    <br> 如果有new关键字，this指向new出来的那个对象；
+                    <br> 在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">6、什么是闭包（closure），为什么要用它？</div>
+                <div class="problem-content">
+                    闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。
+                    <br> 闭包的特性：
+                    <br> 1.函数内再嵌套函数
+                    <br> 2.内部函数可以引用外层的参数和变量
+                    <br> 3.参数和变量不会被垃圾回收机制回收
+                    <div class="code">
+                        
+                    	<pre>
+                    	<code>
+                		//li节点的onclick事件都能正确的弹出当前被点击的li索引
+                		
+                		&lt;ul id="testUL">
+	                        &lt;li&gt; index = 0&lt;/li&gt;
+	                        &lt;li&gt; index = 1&lt;/li&gt;
+	                        &lt;li&gt; index = 2&lt;/li&gt;
+	                        &lt;li&gt; index = 3&lt;/li&gt;
+		                &lt;/ul&gt;
+                		 
+                		
+	                    <script type="text/javascript">
+	                    var nodes = document.getElementsByTagName("li");
+	                    for (i = 0; i < nodes.length; i += 1) {
+	                        nodes[i].onclick = function() {
+	                            console.log(i + 1); //不用闭包的话，值每次都是4
+	                        }(i);
+	                    }
+	                    </script>
+	                    执行say667()后,say667()闭包内部变量会存在,而闭包内部函数的内部变量不会存在 <br> 使得Javascript的垃圾回收机制GC不会收回say667()所占用的资源<br> 
+	                     因为say667()的内部函数的执行需要依赖say667()中的变量 这是对闭包作用的非常直白的描述 
+	                     function say667() { 
+	                     // Local variable that ends up within closure 
+	                     var num = 666; 
+	                     var sayAlert = function() { 
+	                     alert(num); 
+	                     } 
+	                     num++; 
+	                     return sayAlert; 
+	                     } 
+	                     var sayAlert = say667(); sayAlert()//执行结果应该弹出的667
+	                    </code>
+                    	</pre>
+                    	
+                    	
+                    </div>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">8、javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？</div>
+                <div class="problem-content">
+                    use strict是一种ECMAscript 5 添加的（严格）运行模式,这种模式使得 Javascript 在更严格的条件下运行,
+                    <br> 使JS编码更加规范化的模式,消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为。
+                    <br> 默认支持的糟糕特性都会被禁用，比如不能用with，也不能在意外的情况下给全局变量赋值;
+                    <br> 全局变量的显示声明,函数必须声明在顶层，不允许在非函数代码块内声明函数,arguments.callee也不允许使用；
+                    <br> 消除代码运行的一些不安全之处，保证代码运行的安全,限制函数中的arguments修改，严格模式下的eval函数的行为和非严格模式的也不相同;
+                    <br> 提高编译器效率，增加运行速度；
+                    <br> 为未来新版本的Javascript标准化做铺垫。
+                </div>
+            </div>
+            <div class="problem" id="http">HTTP</div>
+            <div class="problem-item">
+                <div class="problem-title">1、一次完整的HTTP事务是怎样的一个过程？</div>
+                <div class="problem-content">
+                    基本流程：
+                    <br> a. 域名解析
+                    <br> b. 发起TCP的3次握手
+                    <br> c. 建立TCP连接后发起http请求
+                    <br> d. 服务器端响应http请求，浏览器得到html代码
+                    <br> e. 浏览器解析html代码，并请求html代码中的资源
+                    <br> f. 浏览器对页面进行渲染呈现给用户
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-title">2、HTTP的状态码有哪些？</div>
+                <div class="problem-content">
+                    一、200状态码：
+                    <br> 成功2××： 成功处理了请求的状态码。
+                    <br> 1、200 ：服务器已成功处理了请求并提供了请求的网页。
+                    <br> 2、204： 服务器成功处理了请求，但没有返回任何内容。
+                    <br>  二、300状态码：
+                    <br> 重定向3×× ：每次请求中使用重定向不要超过 5 次。
+                    <br> 1、301： 请求的网页已永久移动到新位置。当URLs发生变化时，使用301代码。搜索引擎索引中保存新的URL。
+                    <br>  2、302： 请求的网页临时移动到新位置。搜索引擎索引中保存原来的URL。
+                    <br> 3、304： 如果网页自请求者上次请求后没有更新，则用304代码告诉搜索引擎机器人，可节省带宽和开销。
+                    <br> 三、400状态码：
+                    <br> 客户端错误4×× ：表示请求可能出错，妨碍了服务器的处理。
+                    <br> 1、400： 服务器不理解请求的语法。
+                    <br> 2、403： 服务器拒绝请求。
+                    <br> 3、404： 服务器找不到请求的网页。服务器上不存在的网页经常会返回此代码。
+                    <br>  4、410 ：请求的资源永久删除后，服务器返回此响应。该代码与 404（未找到）代码相似，但在资源以前存在而现在不存在的情况下，有时用来替代404 页面代码。如果资源已永久删除，应当使用 301 指定资源的新位置。
+                    <br> 四、500状态码：
+                    <br> 服务器错误5×× ：表示服务器在处理请求时发生内部错误。这些错误可能是服务器本身的错误，而不是请求出错。
+                    <br> 1、500 ：服务器遇到错误，无法完成请求。
+                    <br>  2、503： 服务器目前无法使用（由于超载或停机维护）。
+                </div>
+            </div>
+            <div class="problem" id="algo">算法相关</div>
+            <div class="problem-item">
+                <div class="problem-title">1、手写数组快速排序</div>
+                <div class="problem-content">
+                    关于快排算法的详细说明，可以参考阮一峰老师的文章快速排序 "快速排序"的思想很简单，整个排序过程只需要三步：，
+                    <br> （1）在数据集之中，选择一个元素作为"基准"（pivot）。
+                    <br> （2）所有小于"基准"的元素，都移到"基准"的左边；所有大于"基准"的元素，都移到"基准"的右边。
+                    <br> （3）对"基准"左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。
+                    <br> 参考代码：
+                    <br>
+                    <div class="code">
+                        <code>
+                    	<pre>
+                		var quickSort = function(arr) {
+					　　if (arr.length <= 1) { return arr; }
+					　　var pivotIndex = Math.floor(arr.length / 2);
+					　　var pivot = arr.splice(pivotIndex, 1)[0];
+					　　var left = [];
+					　　var right = [];
+					　　for (var i = 0; i < arr.length; i++){
+					　　　　if (arr[i] < pivot) {
+					　　　　　　left.push(arr[i]);
+					　　　　} else {
+					　　　　　　right.push(arr[i]);
+					　　　　}
+					　　}
+					　　return quickSort(left).concat([pivot], quickSort(right));
+					};
+					</pre>
+                    	
+                    	</code>
+                    </div>
+                    <br> 如果有new关键字，this指向new出来的那个对象；
+                    <br> 在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；
+                </div>
+            </div>
+            <div class="problem" id="safe">WEB安全</div>
+            <div class="problem-item">
+                <div class="problem-title">1、你所了解到的Web攻击技术。</div>
+                <div class="problem-content">
+                    （1）XSS（Cross-Site Scripting，跨站脚本攻击）：指通过存在安全漏洞的Web网站注册用户的浏览器内运行非法的HTML标签或者JavaScript进行的一种攻击。
+                    <br> （2）SQL注入攻击
+                    <br> （3）CSRF（Cross-Site Request Forgeries，跨站点请求伪造）：指攻击者通过设置好的陷阱，强制对已完成的认证用户进行非预期的个人信息或设定信息等某些状态更新。
+                </div>
+            </div>
+            <div class="problem" id="fun">前端性能</div>
+            <div class="problem-item">
+                <div class="problem-title">2、如何优化图像、图像格式的区别</div>
+                <div class="problem-content">
+                    颜色丰富的照片，JPG是通用的选择
+                    <br>人眼的结构很适合查看JPG压缩后的照片，可以充分的忽略并在脑中补齐细节
+                    <br>JPG在压缩率不高时保留的细节还是不错的
+                    <br>WebP能够比JPG减少30%的体积，但目前兼容性较差
+                    <br>如果需要较通用的动画，GIF是唯一可用的选择
+                    <br>GIF支持的颜色范围为256色，而且仅支持完全透明/完全不透明
+                    <br>GIF在显示颜色丰富的动画时可能出现颜色不全、边缘锯齿等问题
+                    <br>如果图片由标准的几何图形组成，或需要使用程序动态控制其显示特效，可以考虑SVG格式
+                    <br>SVG是使用XML定义的矢量图形，生成的图片在各种分辨率下均可自由放缩
+                    <br>SVG中可以通过JavaScript等接口自由变换图片特效，可以完成其中部分元素的自由旋转、移动、变换颜色等
+                    <br>如果需要清晰的显示颜色丰富的图片，PNG比较好
+                    <br>PNG-8能够显示256种颜色，但能够同时支持256阶透明，因此颜色数较少但需要半透明的情景（如微信动画大表情）可以考虑PNG-8
+                    <br>PNG-24可以显示真彩色，但不支持透明，颜色丰富的图片推荐使用（如屏幕截图、界面设计图）
+                    <br>PNG-32可以显示真彩色，同时支持256阶透明，效果最好但尺寸也最大
+                    <br>如果有new关键字，this指向new出来的那个对象；
+                    <br>在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；
+                </div>
+            </div>
+            <div class="problem" id="arc">前端架构</div>
+            <div class="problem-item">
+                <div class="problem-title">1、对MVC、MVVM的理解。</div>
+                <div class="problem-content">
+                    1.mvc
+                    <br> 模型（Model）：数据保存
+                    <br> 视图（View）：用户界面
+                    <br> 控制器（Controller）：业务逻辑
+                    <br> (1)View 传送指令到 Controller
+                    <br> (2)Controller 完成业务逻辑后，要求 Model 改变状态
+                    <br> (3)Model 将新的数据发送到 View ，用户得到反馈
+                    <br> 所有通信都是单向的。
+                    <br> 2、MVVM
+                    <br> 模型（Model）
+                    <br> 视图（View）
+                    <br> 视图模型（ViewModel）
+                    <br> (1)各部分间都是双向通信
+                    <br> (2)View 与 Model 不发生联系，都通过 ViewModel 传递
+                    <br> (3)View 非常薄，不部署任何业务逻辑，称为“被动视图”（Passive View），即没有任何主动性；而 ViewModel 非常厚，所有逻辑都部署在那里
+                    <br> 采用双向绑定（data-binding）：View 的变动，自动反映在 ViewModel ，反之亦然。
+                </div>
+            </div>
+            <div class="problem" id="work">职业规划</div>
+            <div class="problem-item">
+                <div class="problem-title">1、对前端工程师这个职位你是怎么样理解的？</div>
+                <div class="problem-content">
+                    a. 前端是最贴近用户的程序员，前端的能力就是能让产品从 90分进化到 100 分，甚至更好
+                    <br> b. 参与项目，快速高质量完成实现效果图，精确到1px；
+                    <br> c. 与团队成员，UI设计，产品经理的沟通；
+                    <br> d. 做好的页面结构，页面重构和用户体验；
+                    <br> e. 处理hack，兼容、写出优美的代码格式；
+                    <br> f. 针对服务器的优化、拥抱最新前端技术。
+                </div>
+            </div>
+        </section>
+    </article>
+</body>
+
+</html>

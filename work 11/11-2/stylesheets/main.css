@@ -1,0 +1,361 @@
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+address,
+cite,
+dfn,
+em,
+i,
+var {
+    font-style: normal;
+}
+
+.container {
+    margin: 50px auto;
+}
+
+.text-center,
+.bus-wrapper .bus-main,
+.bus-wrapper .bus-main .bus-name,
+.bus-wrapper .bus-main .bus-route .bus-route-right .route-name,
+.route-dest,
+.route-sour,
+.bus-sign,
+.route-name {
+    text-align: center;
+}
+
+.font-weight,
+.bus-wrapper .bus-main .bus-name .bus-name-ch,
+.bus-wrapper .bus-main .bus-route .bus-route-right .route-tag,
+.bus-wrapper .bus-main .bus-route .bus-route-right .route-name,
+.bus-sign,
+.route-name,
+.route-time .time-leftbox .route-time-left,
+.route-time .time-rightbox .route-time-right {
+    font-weight: bold;
+}
+
+.bus-wrapper {
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.bus-wrapper .bus-head {
+    width: 1000px;
+    height: 100px;
+    border: 5px solid #1a2f40;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+}
+
+.bus-wrapper .bus-main {
+    width: 1000px;
+    height: 600px;
+    border: 5px solid #1a2f40;
+    background-color: #005dad;
+    text-align: justify;
+}
+
+.bus-wrapper .bus-main .bus-name {
+    color: #fff;
+}
+
+.bus-wrapper .bus-main .bus-name .bus-name-ch {
+    font-size: 40px;
+    line-height: 65px;
+}
+
+.bus-wrapper .bus-main .bus-name .bus-name-en {
+    font-size: 18px;
+}
+
+.bus-wrapper .bus-main .bus-route {
+    width: 950px;
+    height: 250px;
+    background-color: #fff;
+    margin: 20px auto;
+}
+
+.bus-wrapper .bus-main .bus-route .bus-route-left {
+    width: 780px;
+    height: 250px;
+    float: left;
+}
+
+.bus-wrapper .bus-main .bus-route .bus-route-right {
+    float: left;
+    width: 160px;
+}
+
+.bus-wrapper .bus-main .bus-route .bus-route-right .route-tag,
+.bus-wrapper .bus-main .bus-route .bus-route-right .route-time {
+    color: #000;
+}
+
+.bus-wrapper .bus-main .bus-route .bus-route-right .route-tag {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+.bus-wrapper .bus-main .bus-route .bus-route-right .route-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #005dad;
+    font-size: 60px;
+}
+
+.route-station:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.word-direction,
+.route-dest,
+.route-sour,
+.route-item {
+    width: 18px;
+    height: 200px;
+    margin-left: 8px;
+    float: left;
+    writing-mode: tb-rl;
+}
+
+.route-dest,
+.route-sour {
+    background-color: #005dad;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 3px;
+}
+
+.route-item {
+    line-height: 20px;
+    color: #005dad;
+    letter-spacing: -3px;
+}
+
+.route-item:nth-child(2) {
+    letter-spacing: 23px;
+}
+
+.route-item:nth-child(3) {
+    letter-spacing: 23px;
+}
+
+.route-item:nth-child(4) {
+    letter-spacing: 23px;
+}
+
+.route-item:nth-child(5) {
+    letter-spacing: 16px;
+}
+
+.route-item:nth-child(6) {
+    letter-spacing: 16px;
+}
+
+.route-item:nth-child(7) {
+    letter-spacing: 16px;
+}
+
+.route-item:nth-child(8) {
+    letter-spacing: 16px;
+}
+
+.route-item:nth-child(9) {
+    letter-spacing: 23px;
+}
+
+.route-item:nth-child(10) {
+    letter-spacing: 17px;
+}
+
+.route-item:nth-child(11) {
+    letter-spacing: 11px;
+}
+
+.route-item:nth-child(12) {
+    letter-spacing: 7px;
+}
+
+.route-item:nth-child(13) {
+    letter-spacing: 16px;
+}
+
+.route-item:nth-child(14) {
+    letter-spacing: 5px;
+}
+
+.route-item:nth-child(15) {
+    letter-spacing: 12px;
+}
+
+.route-item:nth-child(16) {
+    letter-spacing: 34px;
+}
+
+.route-item:nth-child(17) {
+    letter-spacing: 5px;
+}
+
+.route-item:nth-child(18) {
+    letter-spacing: 5px;
+}
+
+.route-item:nth-child(19) {
+    letter-spacing: 5px;
+}
+
+.route-item:nth-child(20) {
+    letter-spacing: 5px;
+}
+
+.route-item:nth-child(21) {
+    letter-spacing: -1px;
+}
+
+.route-item:nth-child(22) {
+    letter-spacing: 24px;
+}
+
+.route-item:nth-child(23) {
+    letter-spacing: 34px;
+}
+
+.route-item:nth-child(24) {
+    letter-spacing: 34px;
+}
+
+.route-item:nth-child(25) {
+    letter-spacing: 34px;
+}
+
+.route-item:nth-child(26) {
+    letter-spacing: 24px;
+}
+
+.route-item:nth-child(27) {
+    letter-spacing: 12px;
+}
+
+.bus-sign {
+    color: #005dad;
+}
+
+.route-arrow {
+    width: 700px;
+    height: 15px;
+    background-color: #005dad;
+    margin-left: 40px;
+    position: relative;
+}
+
+.route-arrow:before {
+    position: absolute;
+    top: -12px;
+    left: -40px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 40px solid transparent;
+    border-bottom: 27px solid #005dad;
+}
+
+.route-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #005dad;
+    font-size: 60px;
+}
+
+.route-time .time-leftbox {
+    display: inline-block;
+    width: 90px;
+    height: 60px;
+}
+
+.route-time .time-rightbox {
+    display: inline-block;
+    width: 64px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+}
+
+.route-time .time-rightbox .route-time-right {
+    line-height: 30px;
+}

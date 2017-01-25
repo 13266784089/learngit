@@ -1,0 +1,273 @@
+@import 'reset';
+$widthunit:100px;
+$fontunit:10px;
+$color1a:#1a2f40;
+$color5d:#005dad;
+$colorff:#fff;
+$color00:#000;
+@mixin border($borderwidth, $bordercolor) {
+    border: $borderwidth solid $bordercolor;
+}
+
+@mixin marginauto($margin) {
+    margin: $margin auto;
+}
+
+@mixin box($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin background($backgroundcolor) {
+    background-color: $backgroundcolor;
+}
+
+@mixin borderradius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.container {
+    @include marginauto(50px);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-weight {
+    font-weight: bold;
+}
+
+.bus-wrapper {
+    width: $widthunit*10;
+    height: $widthunit*7;
+    @include marginauto(0);
+    .bus-head {
+        @include box($widthunit*10, $widthunit);
+        @include border(5px, $color1a);
+        border-top-left-radius: $widthunit*5;
+        border-top-right-radius: $widthunit*5;
+    }
+    .bus-main {
+        @include box($widthunit*10, $widthunit*6);
+        @include border(5px, $color1a);
+        @include background($color5d);
+        @extend .text-center;
+        text-align: justify;
+        .bus-name {
+            @extend .text-center;
+            color: $colorff;
+            .bus-name-ch {
+                font-size: 4*$fontunit;
+                @extend .font-weight;
+                line-height: 65px;
+            }
+            .bus-name-en {
+                font-size: $fontunit*1.8;
+            }
+        }
+        .bus-route {
+            width: $widthunit*9.5;
+            height: $widthunit*2.5;
+            @include background($colorff);
+            @include marginauto(20px);
+            .bus-route-left {
+                width: $widthunit*7.8;
+                height: $widthunit*2.5;
+                float: left;
+            }
+            .bus-route-right {
+                float: left;
+                width: $widthunit*1.6;
+                .route-tag,
+                .route-time {
+                    color: $color00;
+                }
+                .route-tag {
+                    margin-top: 10px;
+                    font-size: $fontunit*1.8;
+                    line-height: $fontunit*2;
+                    @extend .font-weight;
+                    text-align: center;
+                    letter-spacing: 8px;
+                }
+                .route-name {
+                    margin-top: $fontunit;
+                    margin-bottom: $fontunit;
+                    color: $color5d;
+                    font-size: $fontunit*6;
+                    @extend .font-weight;
+                    @extend .text-center;
+                }
+            }
+        }
+    }
+}
+
+.route-station:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.word-direction {
+    width: 18px;
+    height: $widthunit*2;
+    margin-left: 8px;
+    float: left;
+    writing-mode: tb-rl;
+}
+
+.route-dest,
+.route-sour {
+    @extend .word-direction;
+    @include background($color5d);
+    @include borderradius(20px);
+    color: $colorff;
+    font-size: $fontunit;
+    line-height: $fontunit*1.6;
+    letter-spacing: 3px;
+    @extend .text-center;
+}
+
+.route-item {
+    @extend .word-direction;
+    line-height: 20px;
+    color: $color5d;
+    letter-spacing: -3px;
+    &:nth-child(2) {
+        letter-spacing: 23px;
+    }
+    &:nth-child(3) {
+        letter-spacing: 23px;
+    }
+    &:nth-child(4) {
+        letter-spacing: 23px;
+    }
+    &:nth-child(5) {
+        letter-spacing: 16px;
+    }
+    &:nth-child(6) {
+        letter-spacing: 16px;
+    }
+    &:nth-child(7) {
+        letter-spacing: 16px;
+    }
+    &:nth-child(8) {
+        letter-spacing: 16px;
+    }
+    &:nth-child(9) {
+        letter-spacing: 23px;
+    }
+    &:nth-child(10) {
+        letter-spacing: 17px;
+    }
+    &:nth-child(11) {
+        letter-spacing: 11px;
+    }
+    &:nth-child(12) {
+        letter-spacing: 7px;
+    }
+    &:nth-child(13) {
+        letter-spacing: 16px;
+    }
+    &:nth-child(14) {
+        letter-spacing: 5px;
+    }
+    &:nth-child(15) {
+        letter-spacing: 12px;
+    }
+    &:nth-child(16) {
+        letter-spacing: 34px;
+    }
+    &:nth-child(17) {
+        letter-spacing: 5px;
+    }
+    &:nth-child(18) {
+        letter-spacing: 5px;
+    }
+    &:nth-child(19) {
+        letter-spacing: 5px;
+    }
+    &:nth-child(20) {
+        letter-spacing: 5px;
+    }
+    &:nth-child(21) {
+        letter-spacing: -1px;
+    }
+    &:nth-child(22) {
+        letter-spacing: 24px;
+    }
+    &:nth-child(23) {
+        letter-spacing: 34px;
+    }
+    &:nth-child(24) {
+        letter-spacing: 34px;
+    }
+    &:nth-child(25) {
+        letter-spacing: 34px;
+    }
+    &:nth-child(26) {
+        letter-spacing: 24px;
+    }
+    &:nth-child(27) {
+        letter-spacing: 12px;
+    }
+}
+
+.bus-sign {
+    @extend .text-center;
+    color: $color5d;
+    @extend .font-weight;
+}
+
+.route-arrow {
+    width: $widthunit*7;
+    height: 15px;
+    background-color: $color5d;
+    margin-left: 40px;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: -12px;
+        left: -40px;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-left: 40px solid transparent;
+        border-bottom: 27px solid #005dad;
+    }
+}
+
+.route-name {
+    margin-top: $fontunit;
+    margin-bottom: $fontunit;
+    color: $color5d;
+    font-size: $fontunit*6;
+    @extend .font-weight;
+    @extend .text-center;
+}
+
+.route-time {
+    .time-leftbox {
+        display: inline-block;
+        width: $fontunit*9;
+        height: $fontunit*6;
+        .route-time-left {
+            @extend .font-weight;
+        }
+    }
+    .time-rightbox {
+        display: inline-block;
+        width: 64px;
+        height: $fontunit*3;
+        line-height: $fontunit*3;
+        vertical-align: top;
+        .route-time-right {
+            line-height: $fontunit*3;
+            @extend .font-weight;
+        }
+    }
+}

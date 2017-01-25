@@ -1,0 +1,251 @@
+body {
+    font: 12px arial;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+header {
+    overflow: hidden;
+    /*position: relative;*/
+}
+
+header nav {
+    width: 485px;
+    float: right;
+    margin-top: 24px;
+
+}
+
+header nav a:link,
+header nav a:visited {
+    float: left;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+
+}
+
+header nav a:hover {
+    color: blue;
+}
+
+.login:link,
+.set:link,
+.more:link {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.set {
+    
+}
+
+.set1 {
+    left: 1203px;
+    top: 48px;
+    width: 70px;
+    /*display: none;*/
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    list-style: none;
+}
+
+.set1:hover{
+	display: block;
+}
+
+
+.set1 a:link,.set1 a:visited{
+	display: block;
+    text-align: left;
+    margin: 0!important;
+    padding: 0 9px;
+    line-height: 26px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+}
+.set1 a:hover{
+	background-color: #3385ff;
+	color: white;
+}
+
+.more{
+	position: relative;
+}
+.sidebar{
+	position: absolute;
+}
+.sidebar1 {
+	position: absolute;
+	width: 90px;
+	top: -24px;
+	left: 395px;
+	height: 584px;
+	background-color:#f9f9f9;
+	/*visibility: hidden;*/
+}
+
+.sidebar1:hover{
+	visibility: visible;
+}
+.sidebar1 div:first-child{
+	padding-top:28px;
+	text-align: center; 
+}
+.sidebar1 span img:first-child{
+	margin-top: 30px;
+}
+
+.sidebar1 a span{
+	display: block;
+}
+.sidebar1 a:link, .sidebar1 a:visited{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+}
+
+.sidebar1 a:hover{
+	text-decoration: underline;
+	color: #666;
+}
+
+
+/*主体部分*/
+
+.content {
+    text-align: center;
+}
+
+.content img {
+    width: 270px;
+    height: 129px;
+}
+
+.input input {
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+}
+
+.button {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.button input {
+    width: 100px;
+    height: 38px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+}
+
+.input {
+    position: relative;
+    margin-right: 0px;
+    height: 36px;
+    border: 1px solid #b6b6b6;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+}
+
+.soutu-btn {
+    z-index: 1;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    background: #fff url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_679c15cc.png) no-repeat;
+    background-image: -webkit-image-set(url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_679c15cc.png) 1x, url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_x2_0d93badf.png) 2x);
+    cursor: pointer;
+}
+
+
+/*底部信息*/
+
+footer {
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    margin-left: -400px;
+    bottom: 50px;
+}
+
+.fleft > div {
+    margin-left: 95px;
+}
+
+.fleft div {
+    float: left;
+    margin-top: 5px;
+}
+
+.fright {
+    float: left;
+    text-align: left;
+}
+
+.qr-code2,
+.fright {
+    margin-left: 35px;
+}
+
+.fleft p {
+    margin-left: 10px;
+    color: #999;
+}
+
+.fright1 a {
+    margin-right: 20px;
+}
+
+.fright3 img {
+    width: 14px;
+    height: 17px;
+}
+
+.fleft .top {
+    color: #666;
+    font-weight: bold;
+}
+
+
+footer p a:link,
+footer p a:visited {
+    color: #999;
+}
+
+footer p span {
+    color: #999;
+}

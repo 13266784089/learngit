@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/*#container{
+    width: 80%;
+    margin: 0 auto;
+}*/
+/*搜索*/
+#search{
+    position: relative;
+    z-index: 35;
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0 0 3px rgba(150,150,150,.2);
+    min-width: 1220px;
+    display: inline-block;
+    min-height: 90px;
+    width: 100%;
+    padding-bottom: 8px;
+}
+.head_tab{
+    position: relative;
+    z-index: 6;
+    margin-left: 194px;
+    padding-top: 12px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.head_tab a,.head_tab b{
+    margin-right: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Microsoft YaHei',arial,'Hiragino Sans GB',sans-serif;
+    color: #333;
+}
+b{
+    font-weight: 700;
+}
+.head_logo{
+    float: left;
+    position: relative;
+    top: 0;
+    margin-left: 40px;
+    margin-right: 16px;
+    width: 137px;
+    height: 46px;
+}
+.head_logo img{
+    display: block;
+    position: relative;
+    top: -17px;
+    z-index: 9;
+    width: 137px;
+    height: 46px;
+    border: 0;
+}
+.input_box{
+    position: relative;
+    float: left;
+    z-index: 7;
+}
+.search_form{
+    padding-right: 0!important;
+    width: 585px;
+    font-size: 0;
+}
+.search_input{
+    display: inline-block;
+    width: 453px;
+    height: 32px;
+    border: 1px solid #b8b8b8;
+    border-right: 0;
+    vertical-align: top;
+}
+.input_text{
+    width: 416px;
+    height: 22px;
+    font: 16px/22px arial;
+    margin: 5px 0 0 7px;
+    outline: 0;
+    background: #fff;
+}
+input{
+    padding: 0;
+    border: 0;
+}
+.search_btn{
+    display: inline-block;
+    z-index: 0;
+    width: 98px;
+    height: 32px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}
+.btn{
+    width: 98px;
+    height: 32px;
+    border-left: 0;
+    padding: 0;
+    padding-top: 1px;
+    line-height: 32px;
+    font-size: 16px;
+    font-family: 'Hiragino Sans GB','Microsoft Yahei','微软雅黑','宋体',Tahoma,Arial,Helvetica,STHeiti;
+    background: url(../Images/search_btn.png) 0 0 no-repeat;
+    color: #333;
+    border: 0;
+    cursor: pointer;
+}
+/*导航条*/
+.menu_nav{
+    height: 45px;
+    line-height: 45px;
+    overflow: hidden;
+    background-color: #3d3f4c;
+    background-repeat: repeat-x;
+    border: solid #292a34;
+    border-width: 0 1px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    clear: both;
+    margin-left: 40px;
+     width:70%;
+    
+}
+.menu_nav ul{
+    overflow: hidden;
+    zoom: 1;
+}
+.menu_nav,.menu_nav li{
+    background: url(../Images/bg.png);
+}
+.menu_nav li{
+    background-repeat: no-repeat;
+    background-position: 100% -105px;
+    float: left;
+    height: 45px;
+    white-space: nowrap;
+    width: auto;
+    list-style: none;
+}
+.menu_nav a{
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    height: 45px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+.more a{
+        background: url(../Images/arrow.gif) no-repeat 46px center;
+    text-indent: -8px;
+}
+/*瀑布流图片*/
+#main{
+    position: relative;
+    
+}
+.imgbox{
+    padding: 15px 0 0 15px;
+    float: left;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+}
+.pic{
+    padding: 10px;
+    
+}
+.pic img{
+    width: 290px;
+    height: auto;
+}
+.text{
+    display: inline-block;
+    color: #333;
+    padding-bottom: 10px;
+}

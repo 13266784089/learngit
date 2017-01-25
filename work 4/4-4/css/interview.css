@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "Microsoft Yahei";
+    min-width: 800px;
+    min-height: 600px;
+    background-color: #7fffd4;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 600px;
+    height: 80px;
+    margin: 5px auto;
+    background-color: #faebd7;
+    border-radius: 15px;
+}
+
+header h1 {
+    text-align: center;
+    line-height: 80px;
+    font-size: 36px;
+    margin-top: 5px;
+}
+
+
+/*主体*/
+
+article {
+    width: 100%;
+    margin: 0px 10px;
+    min-height: 600px;
+    overflow: hidden;
+    background: rgba(158, 158, 158, 0.2);
+}
+
+article section {
+    border-radius: 15px;
+}
+
+article h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+article ol {
+    padding: 0 0 12px 20px;
+}
+
+article ol li pre {
+    padding: 5px;
+}
+
+
+/*html块样式*/
+
+article .left {
+    float: left;
+    width: 49%;
+    height: 600px;
+    margin-right: 3px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    border: 1px solid #333;
+}
+
+article .left li span {
+    color: red;
+    font-size: 14px;
+}
+
+article .left pre {
+    white-space: pre-line;
+}
+
+article .left li:nth-child(even) pre {
+    background-color: aqua;
+    opacity: 1;
+}
+
+article .left li:nth-child(odd) pre {
+    background-color: #7fff00;
+    opacity: 1;
+}
+
+
+/*css块样式*/
+
+article .right {
+    float: right;
+    width: 49%;
+    height: 600px;
+    margin-left: 3px;
+    margin-right: 5px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    border: 1px solid #333;
+}
+
+article .right li span {
+    color: red;
+    font-size: 14px;
+}
+
+article .right pre {
+    white-space: pre-line;
+}
+
+article .right li:nth-child(even) pre {
+    background-color: aqua;
+    opacity: 1;
+}
+
+article .right li:nth-child(odd) pre {
+    background-color: chartreuse;
+    opacity: 1;
+}
+
+
+/*底部*/
+
+footer p {
+    width: 600px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 auto;
+}

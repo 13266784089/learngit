@@ -1,0 +1,1018 @@
+/*重置浏览器属性*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*页面字体及属性*/
+body{
+    font: 14px/100% arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53;
+    background-color: #eff0f0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+i{
+    font-style: normal;
+    font-weight: normal;
+}
+img{
+    border:0;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 100%;
+    height: auto;
+}
+/*主题*/
+#skin{
+    float: left;
+    margin: 10px;
+    padding: 4px;
+    width: 120px;
+}
+#skin li{
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    float: left;
+    text-indent: -9999px;
+    background: url("../images/theme.gif");
+}
+#skin #skin_0{  background-position: 0px 0px;}
+#skin #skin_1{background-position: 95px 0px;}
+#skin #skin_2{  background-position: 75px 0px;}
+#skin #skin_3{  background-position: 55px 0px;}
+#skin #skin_4{  background-position: 35px 0px;}
+#skin #skin_5{  background-position: 15px 0px;}
+/*#skin #skin_0.selected {background-position: 0px 15px;}*/
+#skin #skin_1.selected {background-position: 95px 15px;}
+#skin #skin_2.selected {background-position: 75px 15px;}
+#skin #skin_3.selected {background-position: 55px 15px;}
+#skin #skin_4.selected {background-position: 35px 15px;}
+#skin #skin_5.selected {background-position: 15px 15px;}
+/*侧边栏*/
+.sideBar{
+    width: 50px;
+    height: 100%;
+    background-color: #e6e6e6;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding-top: 63px;
+    font-size: 12px;
+    z-index: 999;
+}
+.applist{
+    position: relative;
+    text-align: center;
+    width: 50px;
+}
+.applist .appwrap{
+    position: relative;
+    height: 70px;
+    margin-bottom: 10px;
+}
+/*侧边栏图标*/
+.applist .icon{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 20px;
+    padding-top: 48px;
+    color: #999;
+}
+.applist .icon_img{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 8px;
+    left: 9px;
+
+}
+/*侧边栏关闭图标*/
+.sideBar_close{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    background: url("../images/slidetoolbar-icon.png") no-repeat;
+    background-position: -49px -73px;
+}
+
+/*主体*/
+.main{
+    position: relative;
+    height: auto;
+    min-width: 1190px;
+    margin-left: 50px;
+}
+/*页面头部*/
+header{
+    width: 100%;
+    height: 61px;
+    border-bottom: 1px solid #ccc;
+}
+/*头部容器*/
+.hao123_tools{
+    width:990px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 12px;
+    line-height: 22px;
+    clear: both;
+}
+/*设为首页*/
+.sethome{
+    width: 60px;
+    height: 25px;
+    position: absolute;
+    left: 192px;
+    margin-top: 20px;
+    margin-right: 8px;
+    display: block;
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    background: url(../images/index_widthlg.png) no-repeat -20px -172px;
+}
+/*头部logo*/
+.hao123_logo{
+    width:192px;
+    height:60px;
+    float: left;
+    z-index: 20;
+}
+.hao123_col{
+    height: 60px;
+    float: left;
+}
+/*天气*/
+.weather{
+    height: 60px;
+    float: left;
+    line-height: 60px;
+    margin-left: 80px;
+    cursor: pointer;
+}
+.weather_city,.weather_info{
+    padding-left: 9px;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 10px;
+    color: #999;
+}
+.weather_cityname{
+    display: inline-block;
+}
+.city_arrow{
+    width: 9px;
+    height: 6px;
+    background: url('../images/index_widthlg.png') no-repeat -52px -97px;
+    margin-left: 4px;
+    vertical-align: middle;
+    display: inline-block;
+
+
+}
+/*天气图标*/
+.weather_icon{
+    line-height: 60px;
+    vertical-align: middle;
+    width: 26px;
+    height: 60px;
+    background: url(../images/weather_icon.png) no-repeat 0 13px;
+    display: inline-block;
+
+}
+.weatherinfo_text{
+    margin-left: 4px;
+    display: inline-block;
+
+}
+.weatherinfo_temp{
+    font-family: 'arial';
+    margin-left: 8px;
+    display: inline-block;
+
+}
+/*日期*/
+.calendar{
+    position: relative;
+    text-align: center;
+    float: left;
+    margin-left: 10px;
+    width: 86px;
+    height: 60px;
+}
+.calendar_info{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    color: #999;
+    cursor: pointer;
+}
+.calendarinfo_month,.calendarinfo_day{
+    font-family: 'arial';
+    padding-left: 3px;
+    display: inline-block;
+}
+.hao123_links{
+    float: right;
+    height: 60px;
+    /*padding: 0 230px 0 0;*/
+    font-size: 12px;
+}
+.loginlink{
+
+    position: relative;
+    display: inline-block;
+
+}
+/*登录*/
+.login{
+    position: relative;
+    padding: 0;
+    line-height: 60px;
+    padding-left: 33px;
+    padding-right: 9px;
+    color: #999;
+    display: inline-block;
+
+}
+/*邮箱*/
+.mail,.skin{
+    width: 68px;
+    height: 60px;
+    display: inline-block;
+
+
+}
+.maillink{
+    height: 60px;
+    line-height: 60px;
+    padding: 0 0 0 31px;
+    text-align: left;
+    background: url(../images/index_widthlg.png) no-repeat -96px -108px;
+    display: block;
+    color: #999;
+}
+/*换肤*/
+.skinlink{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 0 0 31px;
+    text-align: left;
+    color: #999;
+    background: url(../images/index_widthlg.png) no-repeat -244px -108px;
+}
+.hao123_banner{
+    position: absolute;
+    right: 0;
+    width: 222px;
+    height: 60px;
+    top: 0;
+    text-align: right;
+    overflow: hidden;
+    z-index: 16;
+}
+/*搜索栏*/
+.hao123_search{
+    height: 42px;
+    width: 800px;
+    left: 50%;
+    margin-left: -400px;
+    clear: both;
+    position: relative;
+    margin-top: 50px;
+}
+.search{
+    width: 800px;
+    height:40px;
+    display: inline-block;
+}
+/*百度logo*/
+.left_logo{
+    width: 104px;
+    height: 34px;
+    position: relative;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.bd_logolink{
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.tabs_toggle{
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    left: 125px;
+    z-index: 1;
+    padding: 0 10px;
+    width: 38px;
+    height: 38px;
+    font: normal 12px/38px simsun;
+    text-decoration: none;
+    color: #999;
+}
+.tabs_toggle .arrow{
+    overflow: hidden;
+    position: absolute;
+    top: 16px;
+    left: 38px;
+    width: 9px;
+    height: 6px;
+    text-indent: -999px;
+    background: url(../images/index_widthlg.png) -52px -97px;
+}
+
+.inline_box{
+    float: left;
+}
+/*搜索框*/
+.input_wrapper{
+    width: 538px;
+    height: 38px;
+    border: 1px solid #8a8a8a;
+    border-right: 0;
+    position: relative;
+    margin-right: 0;
+}
+.input_word{
+    width: 539px;
+    height: 26px;
+    padding: 6px 0;
+    /*margin: 4px 30px 0 60px;*/
+    font: 16px arial;
+    display: inline-block;
+    border: 0;
+}
+/*热词搜索*/
+.hot_word{
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    text-indent: -99999px;
+    z-index: 12;
+
+}
+.hot_num{
+    height: 18px;
+    top: 6px;
+    opacity: 1;
+    position: absolute;
+    left: 3px;
+    width: 18px;
+    text-indent: 0;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background: url(../images/sug_icon.png) no-repeat;
+    line-height: 18px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.button_wrapper{
+
+}
+/*搜索按钮*/
+.button{
+    margin-top: -2px;
+    width: 120px;
+    height: 42px;
+    background:url(../images/index_widthlg.png) no-repeat -20px 0;
+    display: inline-block;
+}
+/*热搜*/
+.hotSearch{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+.hotSearch_box{
+    margin: 6px 0 26px 228px;
+    position: relative;
+    width: 442px;
+    height: 20px;
+    z-index: 103;
+}
+.hotbox{
+    width: 508px;
+    height: 20px;
+    overflow: hidden;
+}
+.hotbox a{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+}
+.hotbox li{
+    display: inline-block;
+
+}
+.hot_title{
+    margin-right: 6px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+.hot_text{
+    margin-right: 20px;
+}
+.hotbox a.hotsearch_link{
+    color: #090;
+    margin-right: 5px;
+}
+.hotMore{
+    width: 42px;
+    height: 18px;
+    overflow: hidden;
+    position: absolute;
+    right: -126px;
+    top: 1px;
+    z-index: 105;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 20px;
+    color: #34a637;
+}
+/*页面主体*/
+article{
+    position: relative;
+}
+/*导航栏*/
+#menus{
+    width:990px;
+    /*border-top: 2px solid #099e6a;*/
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fcfcfc;
+    margin: 0 auto;
+    height: 38px;
+    font-size: 14px;
+    position: relative;
+}
+.menus_bar{
+    border-left: 0;
+    border-right: 0;
+}
+.menus_bar .first{
+    width: 81px;
+}
+.menu{
+    height: 38px;
+    line-height: 38px;
+    width: 101px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.menu a:hover{
+    color:#0aa770;
+}
+#active{
+    /*background-color: #0aa770;*/
+    cursor: pointer;
+    color: #fff;
+}
+.link{
+    border-right: 0;
+    text-align: center;
+    color: #333;
+    position: relative;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+    display: block;
+    border-right: 1px solid #eaeaea;
+}
+.menu_title{
+    border-width: 2px 0 0 0;
+}
+/*主页面*/
+.main_content{
+    width: 990px;
+    clear: both;
+    margin: 10px auto;
+}
+.content_inner{
+    width: 700px;
+    float: right;
+}
+.content_side{
+    width: 280px;
+    float: left;
+}
+.contentbox_one{
+    width:698px;
+    height: auto;
+    position: relative;
+    border: 1px solid #adb;
+    background-color: #ffffff;
+
+}
+.box_site{
+    position: relative;
+}
+/*常用网站导航*/
+.site_manage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    z-index: 999;
+    background:url(../images/index_widthlg.png) no-repeat -316px -128px;
+}
+.boxsite_list{
+    width: 675px;
+    padding:11px 10px 5px 20px;
+}
+.site_item{
+    width: 103px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-right: 6px;
+    position: relative;
+    display: inline-block;
+
+}
+.site_text{
+    padding-left: 20px;
+    background: url(../images/css_sprite.png) no-repeat;
+}
+.side_link{
+    padding-right: 0;
+    display: inline-block;
+    position: relative;
+}
+/*网站logo*/
+.bd{
+    background-position: 2px -200px;
+}
+.sina{
+    background-position: 2px -280px;
+}
+.souhu{
+    background-position: 2px -320px;
+}
+.tencent{
+    background-position: 2px -40px;
+}
+.wy163{
+    background-position: 2px -159px;
+}
+.youku{
+    background-position: 2px -400px;
+}
+.site_item .tmall{
+    background: url(../images/tmall.png) no-repeat;
+    margin-right: 0px;
+}
+.fenghuang{
+    background-position: 2px -238px;
+}
+.taobao{
+    background-position: 2px -358px;
+}
+.site_item .freegame{
+    background: url(../images/game.png) no-repeat;
+}
+.game4399{
+    background-position: 2px 0px;
+}
+.site_item .nuomi{
+    background: url(../images/nuomi.png) no-repeat;
+
+}
+.site_item .jd{
+    background: url(../images/jd.png) no-repeat;
+
+}
+.site_item .ju{
+    background: url(../images/ju.png) no-repeat;
+}
+.site_item .tdprice{
+    background: url(../images/today.png) no-repeat;
+
+}
+.site_item .hao123video{
+    background: url(../images/hao123.png) no-repeat;
+}
+.carhome{
+    background-position: 2px -520px;
+}
+.site_item .xinhua{
+    background: url(../images/xinhua.png) no-repeat;
+}
+.site_side{
+    position: relative;
+    padding-left: 2px;
+}
+.site_icon{
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    top: -7px;
+    font-size: 12px;
+    margin-left: -10px;
+    padding-top: 2px;
+    padding-left: 8px;
+    line-height: 13px;
+    /*vertical-align: top;*/
+    color: #ff3c00;
+    text-decoration: none;
+    background: url(../images/sprite.png) no-repeat 0px 0px;
+    display: inline-block;
+}
+/*常用网站*/
+.site_famoussite{
+    padding-top: 5px;
+    clear: both;
+    position: relative;
+    z-index: 1;
+}
+.site_line{
+    position: relative;
+    z-index: 110;
+    clear: both;
+    margin: 0 14px 0 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.site_last{
+    margin-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+}
+.site_last span{
+    width: 109px;
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+
+}
+.site_last span a{
+    padding: 1px 4px;
+}
+/*展开按钮*/
+.open_up{
+    width: 22px;
+    height: 22px;
+    background: url(../images/index_icon.png) no-repeat -583px -683px;
+    position: absolute;
+    cursor: pointer;
+    top: 8px;
+}
+.color_orange{
+    color: #f50;
+}
+/*.color_green{*/
+    /*color: #118850;*/
+/*}*/
+/*第一个盒子下面的导航*/
+.content_adbar{
+    width: 700px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    padding-left: 25px;
+    text-align: center;
+}
+.content_adbar span{
+    display: inline-block;
+    padding-right: 25px;
+}
+.adbar_link{
+    color: #3b5998;
+}
+/*猜你喜欢*/
+.like_site{
+    width: 698px;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #cecece;
+}
+/*猜你喜欢图标*/
+.youlike{
+    width: 20px;
+    height: 60px;
+    display: block;
+    background: url(../images/new_index_icon.png);
+    background-position: 0 0;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    z-index: 10;
+}
+.like_main{
+    padding: 9px 0;
+}
+.guess_like{
+    padding: 0 0 0 35px;
+    width: 662px;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+}
+.red_icon{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-image: url(../images/new_index_icon.png);
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1px;
+    left: 63px;
+}
+/*类目标题*/
+.like_title{
+    width: 35px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    display: inline-block;
+    /*color: #118850;*/
+
+}
+/*类目行*/
+.like_row{
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 25px;
+}
+.like_col{
+    width: 92px;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    display: inline-block;
+}
+.like_link{
+    display: inline-block;
+    padding-left: 18px;
+}
+/*换一换*/
+.change_btn{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    outline: 0;
+}
+.like_change{
+    width: 21px;
+    height: 61px;
+    display: block;
+    background: url(../images/new_index_icon.png) 0 -145px;
+    position: absolute;
+    right: -1px;
+    top: 25px;
+    z-index: 10;
+    outline: 0;
+}
+.like_hot{
+    background: url(../images/hot.png) no-repeat 0px 7px;
+}
+
+
+/*侧边栏*/
+.service_tab{
+    width: 278px;
+    border: 1px solid #cecece;
+    border-bottom: 0;
+    background-color: #fcfcfc;
+}
+/*侧边栏分类网站*/
+.service_bar{
+    padding: 9px 0 10px 18px;
+}
+.service_barlist{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.bar_item{
+    width:128px;
+    float: left;
+    position: relative;
+    padding-top: 6px;
+}
+.category{
+    padding-left: 25px;
+    position: absolute;
+}
+.star_icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../images/index_menus_widthlg.png) no-repeat;
+}
+.tips{
+    height: 36px;
+    position: relative;
+    margin-top: -8px;
+}
+.tips_top{
+    position: absolute;
+    top: 5px;
+    left: 103px;
+    width: 12px;
+    height: 8px;
+    background: url(../images/tip-icon.png) -16px 0 no-repeat;
+    z-index: 20;
+}
+.tips_info{
+    width: 220px;
+    height: 24px;
+    background-color: #f7f7f5;
+    border: 1px solid #d9d9d9;
+    position: absolute;
+    padding-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 8px;
+    left: 0;
+    z-index: 10;
+}
+.tips_text{
+    margin: 0 6px 0 4px;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    text-decoration: none;
+}
+.tips_link{
+    font-size: 12px;
+    line-height: 2;
+    color: #ff5601;
+    text-decoration: none;
+}
+.tips_close{
+    background: url(../images/tip-icon.png) 0 -16px no-repeat;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+}
+/*侧边栏图标*/
+.star_tv{
+    background-position: -20px -81px;
+}
+.star_game{
+    background-position: -19px -301px;
+}
+.star_film{
+    background-position: -20px -160px;
+}
+.star_comic{
+    background-position: -20px -381px;
+}
+.star_toutiao{
+    background-position: -20px -100px;
+}
+.star_travel{
+    background-position: -20px -261px;
+}
+.star_caipiao{
+    background-position: -20px -21px;
+}
+.star_gaoxiao{
+    background-position: -20px -121px;
+}
+.star_tuan{
+    background-position: -20px -281px;
+}
+.star_know{
+    background-position: -20px -362px;
+}
+.star_life{
+    background-position: -20px -221px;
+}
+
+.star_music{
+    background-position: -19px -42px;
+}
+
+.split{
+    padding: 0 5px;
+    color: #999;
+    position: relative;
+    top: -1px;
+}
+/*侧边栏新闻导航*/
+.news_tab{
+    position: relative;
+    background-color: #fcfcfc;
+    border: 1px solid #cecece;
+}
+.news_list0{
+    height:330px;
+}
+.news_tab{
+    font-size: 14px;
+    color: #616161;
+    background: #f7f7f7;
+    border: 0;
+    width: 278px;
+    position: relative;
+    z-index: 20;
+}
+.news_channel{
+    display: inline-block;
+    width: 51px;
+    text-align: center;
+    color: #616161;
+    position: relative;
+}
+/*.news_first{*/
+    /*color: #498949;*/
+    /*border-top: 1px solid #0aa770;*/
+/*}*/
+.news_channel span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    position: relative;
+    cursor: pointer;
+    margin-top: -1px;
+    width: 100%;
+    height: 34px;
+    border-top-width: 1px;
+}
+.border_left{
+    border-left:1px solid #eaeaea ;
+}
+.news_tab .open_up{
+    width:14px;
+    height: 14px;
+    top: 8px;
+    right: 0px;
+}
+/*列表新闻*/
+.news_zixun{
+    height: 290px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+/*新闻图片*/
+.news_picture{
+    padding-bottom: 10px;
+    height: 120px;
+    position: relative;
+}
+/*新闻列表文字*/
+.pic_txt{
+    position: relative;
+    display: block;
+    width: 278px;
+    height: 20px;
+    padding-top: 6px;
+    text-align: center;
+    top: -26px;
+    color: #fff;
+    cursor: pointer;
+}
+.news_zixun p{
+    width: 248px;
+    height: 28px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+.rank{
+    background: #cecece;
+    width: 4px;
+    height: 4px;
+    float: left;
+    margin: 5px 5px 0 0;
+}
+.rank_icon{
+    width: 16px;
+    height: 16px;
+    background: url(../images/index_widthlg.png) no-repeat -118px -56px;
+    margin: -2px 5px 0 0;
+    float: left;
+}

@@ -1,0 +1,22 @@
+#menus{
+    border-top: 2px solid #ff9680;
+}
+#active{
+    background-color: #ff9680;
+}
+.news_first{
+    color: #ff9680;
+    border-top: 1px solid #ff9680;
+}
+.color_green {
+    color: #ff9680;
+}
+.like_title {
+    color: #ff9680;
+}
+#skin #skin_0.selected {background-position: 0px 0px;}
+#skin #skin_1.selected {background-position: 95px 0px;}
+#skin #skin_2.selected {background-position: 75px 0px;}
+#skin #skin_3.selected {background-position: 55px 0px;}
+#skin #skin_4.selected {background-position: 35px 15px;}
+#skin #skin_5.selected {background-position: 15px 0px;}

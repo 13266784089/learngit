@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>计算器</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<!--容器-->
+<div class="container">
+    <!--计算器表格界面-->
+    <table cellspacing="0" cellpadding="0">
+        <!--表头为显示区-->
+        <thead>
+        <tr>
+            <td colspan="5"><input id="cal_Output" type="text" value="0" disabled="disabled"/></td>
+        </tr>
+        </thead>
+        <!--表格主体为功能区-->
+        <tbody id="cal_Button">
+        <tr>
+            <td><input class="btn" type="button" value="C" _type="clr"></td>
+            <td><input class="btn" type="button" value="Back" _type="back"></td>
+            <td><input class="btn" type="button" value="/" _type="op"></td>
+            <td><input class="btn" type="button" value="sin" _type="op"></td>
+            <td><input class="btn" type="button" value="*" _type="op"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type="button" value="7" _type="num"></td>
+            <td><input class="btn" type="button" value="8" _type="num"></td>
+            <td><input class="btn" type="button" value="9" _type="num"></td>
+            <td><input class="btn" type="button" value="cos" _type="op"></td>
+            <td><input class="btn" type="button" value="-" _type="op"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type="button" value="4" _type="num"></td>
+            <td><input class="btn" type="button" value="5" _type="num"></td>
+            <td><input class="btn" type="button" value="6" _type="num"></td>
+            <td><input class="btn" type="button" value="tan" _type="op"></td>
+            <td><input class="btn" type="button" value="+" _type="op"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type="button" value="1" _type="num"></td>
+            <td><input class="btn" type="button" value="2" _type="num"></td>
+            <td><input class="btn" type="button" value="3" _type="num"></td>
+            <td><input class="btn" type="button" value="exp" _type="op"></td>
+            <td rowspan="2"><input class="equal btn" type="button" value="=" _type="equal"></td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><input class="zero btn" type="button" value="0" _type="num"></td>
+            <td><input class="btn" type="button" value="." _type="point"></td>
+            <td><input class="btn" type="button" value="log" _type="op"></td>
+
+
+        </tr>
+        </tbody>
+
+
+    </table>
+</div>
+
+<script src="js/function.js"></script>
+</body>
+</html>

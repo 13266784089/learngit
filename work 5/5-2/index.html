@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS开发简易计算器</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+
+</head>
+<body>
+<div class="container">
+    <form method="get">
+        <p>请输入第一个数:</p>
+        <input type="text" id="num1"/>
+        <p>请输入操作:</p>
+        <select id="operator">
+            <option value='+'>加</option>
+            <option value="-">减</option>
+            <option value="*">乘</option>
+            <option value="/">除</option>
+        </select>
+        <p>请输入第二个数:</p>
+        <input type="text" id="num2"/>
+        <button type="button" value="submit" onClick="calculator()">计算</button>
+        <p>结果:</p>
+        <input type="text" id="result"/>
+    </form>
+</div>
+<script src="js/function.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>正常盒子和怪异盒子对比</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*.deizi {
+        width: 130px;
+        height: 130px;
+        background-color: blue;
+        margin: 100px;
+    }
+    */
+    .xiezi {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+    }
+    
+    .xiehe {
+        margin: 100px;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: 5px solid red;
+    }
+    
+    .xiezi1 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+    }
+    
+    .xiehe1 {
+        margin: 50px;
+        margin-left: 100px;
+        padding: 10px;
+        width: 130px;
+        height: 130px;
+        background-color: aqua;
+        border: 5px solid red;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+
+<body>
+	<!-- 正常盒子模型 -->
+    <div class="xiehe">
+        <div class="xiezi">
+            鞋子
+        </div>
+    </div>
+    <hr>
+
+    <!-- 怪异盒子模型 -->
+    <div class="xiehe1">
+        <div class="xiezi1">
+            怪异的鞋子
+        </div>
+    </div>
+</body>
+
+</html>

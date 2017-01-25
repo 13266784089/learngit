@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex box</title>
+    <style type="text/css">
+    body{
+    	background-color: beige;
+    }
+    /*水平分栏*/
+    .horizontal {
+        display: -webkit-flex;
+        background-color: brown;
+        width: 400px;
+        flex-direction: row;
+    }
+    
+    .first {
+        height: 100px;
+        background-color: orange;
+    }
+    
+    #second {
+        height: 100px;
+        background-color: aqua;
+    }
+    
+    .three {
+        height: 100px;
+        background-color: blue;
+    }
+
+    /*垂直分栏*/
+    .vertical {
+        display: -webkit-flex;
+        background-color: brown;
+        width: 400px;
+        flex-direction: column;
+    }
+    
+    .first1 {
+        height: 100px;
+        background-color: orange;
+    }
+    
+    #second1 {
+        height: 100px;
+        background-color: aqua;
+    }
+    
+    .three1 {
+        height: 100px;
+        background-color: blue;
+    }
+
+    /*排序*/
+    .sort {
+        display: -webkit-flex;
+        background-color: brown;
+        width: 400px;
+        flex-direction: row;
+    }
+    
+    .first2 {
+        height: 100px;
+        background-color: orange;
+        order: 3;
+    }
+    
+    #second2 {
+        height: 100px;
+        background-color: aqua;
+        order: 1;
+    }
+    
+    .three2 {
+        height: 100px;
+        background-color: blue;
+        order: 2;
+    }
+	/*column分栏 */
+    .column{
+    	-webkit-column-count:4;
+    	-webkit-column-rule:10px solid #090;
+    	border: 5px solid blue;
+    }
+
+    img{
+    	width: 200px;
+    	height: 100px;
+    }
+
+   	/*旧版弹性盒子居中*/
+   	.box{
+   		display: -webkit-box;
+   		background-color: aqua;
+   		width: 300px;
+   		height:300px;
+   		-webkit-box-pack:center;
+		-webkit-box-align:center;
+   	}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 水平分栏 -->
+        <h2>水平分栏</h2>
+        <div class="horizontal">
+            <div class="first">第一个</div>
+            <div id="second">第二个</div>
+            <div class="three">第三个</div>
+        </div>
+        <hr>
+        <!-- 垂直分栏 -->
+        <h2>垂直分栏</h2>
+        <div class="vertical">
+            <div class="first1">第一个</div>
+            <div id="second1">第二个</div>
+            <div class="three1">第三个</div>
+        </div>
+        <hr>
+        <!-- 排序 -->
+        <h2>排序</h2>
+        <div class="sort">
+            <div class="first2">第一个</div>
+            <div id="second2">第二个</div>
+            <div class="three2">第三个</div>
+        </div>
+        <hr>
+        <!-- column分栏 -->
+        <h2>column分栏</h2>
+        <div class="column">
+            <img src="http://cdn.yuezhixing.cn/o_1ank0e2b11cr71ufn1evsgej1p17c.jpg-tweb.article" alt="图片"> 量子点显示技术之所以如此备受关注，首先是权威专家的一致看好。有媒体记者相继采访了国际顶尖纳米材料学家、国家千人计划入选者彭笑刚、中科院院士欧阳钟灿、教育部“长江学者”特聘教授孙洪波、北京交通大学教授徐征等量子科技领域的权威专家，众专家一致认为，量子点不仅将为显示技术带来颠覆性的提升，更将在生物科学、太阳能电池等领域具有广泛的应用前景，是改变人类未来的核心技术方向之一。“量子点是人类至今发现的最好发光材料。”彭笑刚坚定地认为量子点代表显示技术的未来。他认为，传统的发光材料主要分有机和无机两种，两种材料各有利弊，只有量子点的发光纯度既高于有机分子又高于无机荧光粉，量子点的稳定性与无机荧光粉相当，但加工性能与有机分子相同。因此，量子点兼备了有机物和无机物的优势，并且从显示产业要求看，量子点无论是在激发方式，还是发光性质方面都在这些材料之上。 其次是厂商为抢占技术先机已率先押注量子点显示技术。这些年来，我国彩电厂商不断加大量子点电视的研发和投入，并取得了阶段性成果。TCL集团董事长李东生在接受记者采访时表示，量子点电视成熟度较高，中国企业当中，TCL是推出量子点显示这个概念的，量子点显示是一种新型显示技术，能够以更简单的工艺和更低的成本做出更好的显示效果。TCL是最先提出量子点显示概念的中国企业。作为布局量子点科技最早、投入最大、成果最丰厚的企业，TCL是中国唯一具备“液晶模组-液晶面板-整机”全产业链垂直一体化整合的电视企业，TCL在产品研发和生产方面具备独特优势，并依托自身优势成为行业第一个有实力推出量子点电视的企业。早在2014年，TCL就推出了中国第一台量子点电视H9700，在量子点布局上率先落子。 未来显示之争，量子点优势明显 提到未来显示之争，不得不先提PDP和LED。PDP（Plasma Display Panel）等离子技术源于上世纪90年代，曾风靡一时，被用在各品牌的高端产品上，价格相当昂贵。但遗憾的是还未普及便被更廉价的LCD液晶屏幕所取代，后来LCD的背灯由原来的CCFL荧光灯换成了白色LED灯，成就了WLED即LED。而如今的OLED已经不需要LCD液晶面板，RGB色彩信号直接由OLED二极管显示，不仅视角广，对比度高，而且反应速度快且兼具轻薄、省电节能的特点。LG是OLED技术的绝对拥泵，其在2013年就推出了首款OLED电视，随着LG在OLED方面的投入和不遗余力地推广，让OLED电视成为家电市场的新宠。目前国内，创维、长虹等厂商也都有OLED电视产品推出。但OLED对技术门槛和上下游产业链的整合要求很高且良品率偏低，致使OLED电视量产能力受阻，价格较高。
+        </div>
+		<hr>
+		<!-- 旧版弹性盒子居中 -->
+		<h2>旧版弹性盒子居中</h2>
+		<div class="box">
+				<img src="http://cdn.yuezhixing.cn/o_1ank0e2b11cr71ufn1evsgej1p17c.jpg-tweb.article" alt="图片">
+		</div>
+		
+    </div>
+</body>
+
+</html>

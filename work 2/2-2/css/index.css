@@ -1,0 +1,149 @@
+body {
+    margin: 10px 0 20px 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: url(../images/beijing.gif);
+    color: #000000;
+    font-size: 12px;
+}
+
+#center {
+    width: 710px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+header {
+    width: 710px;
+    height: 82px;
+}
+
+header div {
+    float: left;
+}
+
+
+/*header开始*/
+
+.nav {
+    width: 432px;
+    height: 82px;
+    margin-left: 40px;
+}
+
+.nav p {
+    margin-left: 300px;
+    margin-top: 65px;
+}
+
+.nav a {
+    margin-left: 5px;
+    color: rgb(255, 0, 153);
+    text-decoration: none;
+}
+
+.angle {
+    margin-right: 0px
+}
+
+.logo {
+    width: 180px;
+    height: 76px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+
+/*header结束*/
+
+
+/*article开始*/
+
+article {
+    width: 710px;
+    color: #333333;
+}
+
+article table {
+    border-left: 1px solid rgb(204, 204, 204);
+    border-top: 1px solid rgb(204, 204, 204);
+    border-collapse: collapse;
+    line-height: 150%;
+}
+
+article table td,
+article table th {
+    border-right: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+#center article caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+#container {
+    width: 639px;
+    margin: 0 auto;
+}
+
+.note1 {
+    height: 58px;
+}
+
+#container .note2 {
+    color: rgb(0, 51, 153);
+    background-color: rgb(238, 238, 238);
+    text-align: left;
+}
+
+.red {
+    color: rgb(255, 0, 0);
+}
+
+.blue {
+    color: #0000ff;
+}
+
+article table tr td:first-child {
+    width: 133px;
+    text-align: right;
+}
+
+.note3 {
+    height: 85px;
+}
+
+#container .note3 input {
+    width: 86px;
+    margin-right: 276px;
+}
+
+
+/*article结束*/
+
+
+/*footer开始*/
+
+footer {
+    height: 45px;
+}
+
+footer .middle {
+    text-align: center;
+    margin-top: 2px;
+    color: #333333;
+    margin-bottom: 3px;
+}
+

@@ -1,0 +1,314 @@
+body {
+    font: 12px arial;
+    margin: 0;
+    padding: 0;
+    behavior:url(./js/csshover.htc);
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+    position: relative;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+header {
+    overflow: hidden;
+}
+
+header nav {
+    position: relative;
+    width: 480px;
+    float: right;
+    margin-top: 20px;
+}
+
+.nav1 a:link,
+.nav1 a:visited {
+    float: left;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.nav1 a:hover {
+    color: blue;
+}
+
+.nav1 a:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.login:link,
+.set:link,
+.more:link {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.set {
+    margin-left: 360px;
+    margin-top: 5px;
+    position: fixed;
+    text-decoration: underline;
+}
+
+.set:hover{
+    color: blue;
+}
+.set ul {
+    display: none;
+    /*width: 70px;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    list-style-type: none;
+    padding-left: 0px;
+    text-decoration: none;
+    position: relative;
+    left: -20px;
+    top: -3px;*/
+}
+
+.set:hover ul {
+    display: block;
+    width: 70px;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    list-style-type: none;
+    padding-left: 0px;
+    text-decoration: none;
+    position: relative;
+    left: -20px;
+    top: -3px;
+}
+
+.set ul li a:link,
+.set ul li a:visited {
+    display: block;
+    text-align: center;
+    padding: 0 9px;
+    line-height: 26px;
+    background: white;
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.set ul li a:hover {
+    background: #3385ff;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar {
+    margin-left: 406px;
+    margin-top: 5px;
+    position: fixed;
+}
+
+.sidebar ul {
+    display: none;
+    /*text-align: center;
+    list-style-type: none;
+    width: 86px;
+    border: 1px solid #e7e7e7;
+    background-color: #f9f9f9;
+    padding-left: 0px;
+    height: 637px;
+    position: absolute;
+    top: -42px;
+    left: -16px;*/
+}
+
+.sidebar:hover ul {
+    display: block;
+    text-align: center;
+    list-style-type: none;
+    width: 86px;
+    border: 1px solid #e7e7e7;
+    background-color: #f9f9f9;
+    padding-left: 0px;
+    height: 637px;
+    position: absolute;
+    top: -42px;
+    left: -12px;
+}
+
+.sidebar a img {
+    display: block;
+    margin: 0 auto;
+}
+
+.sidebar .more {
+    margin-top: 28px;
+}
+
+.sidebar a:link,
+.sidebar a:visited {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+    height: 70px;
+    padding-top: 18px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+    color: #666;
+}
+
+.sidebar .all:link{
+    text-decoration: underline;
+}
+
+
+/*主体部分*/
+
+.content {
+    text-align: center;
+}
+/*百度logo*/
+.content img {
+    width: 270px;
+    height: 129px;
+    margin: 10px 0 20px 0;
+}
+/*输入框*/
+.input input {
+    margin: 6px 0 0 1px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+    text-indent: 0px;
+    text-align: start;
+}
+
+.input {
+    position: relative;
+    margin-right: 0px;
+    height: 36px;
+    border: 1px solid #b6b6b6;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+}
+
+.input:hover{
+    border: 1px solid #3385ff;
+    border-right:0; 
+}
+/*小图标*/
+.soutu-btn {
+    z-index: 1;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    cursor: pointer;
+    background-image:url(../img/camera_new_679c15cc.png);
+    background-position: left top;
+}
+
+.soutu-btn:hover{
+    background-image:url(../img/camera_new_679c15cc.png);
+    background-position: left -80%;
+}
+/*点击按钮*/
+.button {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-left: -3px;
+}
+
+.button input {
+    width: 100px;
+    height: 38px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border: 1px solid #2d78f4;
+    outline: 0;
+    cursor: pointer;
+}
+/*底部信息*/
+
+footer {
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    margin-left: -400px;
+    bottom: 50px;
+}
+
+.fleft > div {
+    margin-left: 95px;
+}
+
+.fleft div {
+    float: left;
+    margin-top: 5px;
+}
+
+.fright {
+    float: left;
+    text-align: left;
+}
+
+.qr-code2,
+.fright {
+    margin-left: 35px;
+}
+
+.fleft p {
+    margin-left: 10px;
+    color: #999;
+}
+
+.fright1 a {
+    margin-right: 20px;
+}
+
+.fright3 img {
+    width: 14px;
+    height: 17px;
+}
+
+.fleft .top {
+    color: #666;
+    font-weight: bold;
+}
+
+.fright3 a{
+    vertical-align: 4px;
+}
+footer p a:link,
+footer p a:visited {
+    color: #999;
+}
+
+footer p span {
+    color: #999;
+}
